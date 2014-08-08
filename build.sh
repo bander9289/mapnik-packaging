@@ -33,14 +33,14 @@ function prep_osx {
 }
 
 function upgrade_gcc {
-    echo "adding gcc-4.8 ppa"
+    echo "adding gcc-4.7 ppa"
     sudo add-apt-repository -y ppa:ubuntu-toolchain-r/test
     echo "updating apt"
     sudo apt-get update -qq -y
     echo "installing C++11 compiler"
-    sudo apt-get install -qq -y gcc-4.8 g++-4.8
-    export CORE_CC="gcc-4.8"
-    export CORE_CXX="g++-4.8"
+    sudo apt-get install -qq -y gcc-4.7 g++-4.7
+    export CORE_CC="gcc-4.7"
+    export CORE_CXX="g++-4.7"
     export CC="${CORE_CC}"
     export CXX="${CORE_CXX}"
 }
