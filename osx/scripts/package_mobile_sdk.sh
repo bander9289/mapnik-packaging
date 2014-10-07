@@ -14,9 +14,9 @@ if [[ ${platform_lowercase} =~ "iphone" ]]; then
     platform_lowercase="ios"
 fi
 
-BUILD_POSTFIX=""
+BUILD_POSTFIX="-protobuf-2.6"
 if [[ ${USE_LTO} == true ]]; then
-    BUILD_POSTFIX="-lto"
+    BUILD_POSTFIX="-lto-protobuf-2.6"
 fi
 
 if [[ ${OFFICIAL_RELEASE} == true ]]; then
