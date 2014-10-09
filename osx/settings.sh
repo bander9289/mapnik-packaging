@@ -141,7 +141,7 @@ if [[ ${MASON_PLATFORM} == 'Linux' ]]; then
     fi
     export ARCH_FLAGS=
     if [[ "${CXX11}" == true ]]; then
-      export CXX_VISIBILITY_FLAGS="-fvisibility-inlines-hidden -fvisibility=hidden -fno-common"
+      export CXX_VISIBILITY_FLAGS="-fvisibility-inlines-hidden -fno-common"
       export STDLIB="libstdcpp"
       export STDLIB_CXXFLAGS="-std=c++11"
       export STDLIB_LDFLAGS=""
@@ -296,7 +296,7 @@ elif [[ ${UNAME} == 'Darwin' ]]; then
     unset AR
     unset RANLIB
     if [[ "${CXX11}" == true ]]; then
-        export CXX_VISIBILITY_FLAGS="-fvisibility-inlines-hidden -fvisibility=hidden -fno-common"
+        export CXX_VISIBILITY_FLAGS="-fvisibility-inlines-hidden -fno-common"
         export STDLIB="libcpp"
         export STDLIB_CXXFLAGS="-std=c++11 -stdlib=libc++"
         export STDLIB_LDFLAGS="-stdlib=libc++" #-lc++ -lc++abi
